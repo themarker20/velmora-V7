@@ -10,7 +10,11 @@
 }
 html[dir="rtl"] body{ font-family:'Cairo','Montserrat',sans-serif; }
 html[dir="rtl"] h1,html[dir="rtl"] h2,html[dir="rtl"] h3,html[dir="rtl"] h4{ font-family:'Amiri','Cairo',serif; }
-html { scroll-behavior:smooth; }
+html { scroll-behavior:smooth !important; }
+
+html[dir="ltr"] header .nav-inner{
+  max-width: 1450px !important;
+}
 
 *{ box-sizing:border-box; margin:0; padding:0; }
 html,body{ background:var(--bg); color:var(--fg); font-family:var(--sans); -webkit-font-smoothing:antialiased; }

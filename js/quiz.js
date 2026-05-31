@@ -127,9 +127,9 @@
       document.getElementById("r-reset").onclick = reset;
       document.getElementById("r-share").onclick = ()=>{
         const txt = lang==="ar"
-          ? `هويتي العطرية: ${r.arch.name.ar} — اكتشف عطرك على VELMORA PARIS`
-          : `My scent identity: ${r.arch.name.en} — discover yours at VELMORA PARIS`;
-        if (navigator.share) navigator.share({title:"VELMORA",text:txt,url:location.href}).catch(()=>{});
+          ? `هويتي العطرية: ${r.arch.name.ar} — اكتشف عطرك على VELMORA Nich Perfume`
+          : `My scent identity: ${r.arch.name.en} — discover yours at VELMORA Nich Perfume`;
+        if (navigator.share) navigator.share({title:"VELMORA Nich Perfume",text:txt,url:location.href}).catch(()=>{});
         else { navigator.clipboard.writeText(txt+" "+location.href); VELMORA.toast(lang==="ar"?"تم نسخ الرابط":"Link copied"); }
       };
       return;

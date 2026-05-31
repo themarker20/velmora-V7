@@ -38,7 +38,7 @@
     return `
     <header class="navbar">
       <div class="nav-inner">
-        <a href="index.html" class="brand">VELMORA</a>
+        <a href="index.html" class="brand">VELMORA Nich Perfume</a>
         <nav class="nav-links">
           ${links.map(([h,k])=>`<a href="${h}" class="${h===current?'active':''}" data-i18n="${k}">${t(k)}</a>`).join("")}
         </nav>
@@ -59,8 +59,8 @@
   function footer(){
     return `
     <footer class="footer">
-      <p class="footer-brand">VELMORA</p>
-      <p class="footer-sub">PARIS · SINCE 2007</p>
+      <p class="footer-brand">VELMORA Nich Perfume</p>
+      <p class="footer-sub">Egypt · SINCE 2007</p>
       <div class="divider"></div>
       <div class="socials">
         <a href="#" aria-label="ig">IG</a><a href="#" aria-label="fb">FB</a><a href="#" aria-label="tw">TW</a>
@@ -165,7 +165,7 @@
   function sendWhatsApp(data){
     const isAr = lang === "ar";
     const lines = [];
-    lines.push(isAr ? "🌹 طلب جديد من VELMORA PARIS" : "🌹 New VELMORA PARIS order");
+    lines.push(isAr ? "🌹 طلب جديد من VELMORA Nich Perfume" : "🌹 New VELMORA Nich Perfume order");
     lines.push("");
     lines.push((isAr?"الاسم: ":"Name: ") + data.name);
     lines.push((isAr?"الهاتف: ":"Phone: ") + data.phone);
