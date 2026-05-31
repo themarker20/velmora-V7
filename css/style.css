@@ -314,7 +314,7 @@ html[dir="rtl"] .hr-gold{ background:linear-gradient(to left,var(--gold),transpa
   position:fixed; inset:0; background:rgba(0,0,0,.7); z-index:80;
   opacity:0; pointer-events:none; transition:opacity .35s;
 }
-.cart-overlay.open,.modal-overlay.open{ opacity:1; pointer-events:none; }
+.cart-overlay.open,.modal-overlay.open{ opacity:1; pointer-events:auto; }
 .cart-drawer{
   position:fixed; top:0; inset-inline-end:0; height:100%; width:420px; max-width:100%;
   background:#0a0a0a; border-inline-start:1px solid var(--line);
@@ -348,7 +348,7 @@ html[dir="rtl"] .cart-drawer.open{ transform:translateX(0); }
   width:min(560px,92vw); max-height:90vh; overflow-y:auto;
   z-index:100; opacity:0; pointer-events:none; transition:all .35s;
 }
-.modal.open{ opacity:1; pointer-events:none; transform:translate(-50%,-50%) scale(1); }
+.modal.open{ opacity:1; pointer-events:auto; transform:translate(-50%,-50%) scale(1); }
 .modal-x{ position:absolute; top:.8rem; inset-inline-end:.8rem; }
 .modal h3{ font-family:var(--serif); color:var(--gold-light); font-size:1.6rem; margin-bottom:.4rem; }
 .co-form{ display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:1.4rem; }
