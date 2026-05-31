@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+<title>المجلة — VELMORA PARIS</title>
+</head>
+<body>
+  <div class="cursor"></div>
+  <div class="cursor-dot"></div>
+<div id="site-header"></div>
+
+<section class="section" style="padding-top:9rem">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="kicker">— LE JOURNAL —</p>
+      <h2 class="gold-gradient" data-i18n="journal_title"></h2>
+    </div>
+    <div class="journal-grid" id="journal-grid"></div>
+  </div>
+</section>
+<div id="site-footer"></div>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script>
+const posts = [
+  { titleAr:"فن صناعة العطر الفرنسي", titleEn:"The Art of French Perfumery", catAr:"إرث", catEn:"Heritage", read:6 },
+  { titleAr:"العود: ذهب الشرق السائل", titleEn:"Oud: The Liquid Gold of the East", catAr:"مكونات", catEn:"Ingredients", read:4 },
+  { titleAr:"كيف تختار عطرك المسائي؟", titleEn:"Choosing Your Evening Scent", catAr:"أسلوب", catEn:"Style", read:5 },
+];
+function renderJ(){
+  const lang = VELMORA.getLang();
+  document.getElementById('journal-grid').innerHTML = posts.map(p=>`
+    <article class="journal-card">
+      <div class="journal-inner">
+        <span class="journal-cat">${lang==='ar'?p.catAr:p.catEn}</span>
+        <h3>${lang==='ar'?p.titleAr:p.titleEn}</h3>
+        <p>${p.read} min read</p>
+      </div>
+    </article>`).join('');
+}
+document.addEventListener('DOMContentLoaded', renderJ);
+document.addEventListener('langchange', renderJ);
+</script>
+</body></html>

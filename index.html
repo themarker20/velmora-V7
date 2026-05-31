@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+<title>VELMORA PARIS — فيلمورا باريس</title>
+<meta name="description" content="دار عطور باريسية حصرية — رسائل حب مصاغة من قلب باريس.">
+</head>
+<body>
+  <div class="cursor"></div>
+  <div class="cursor-dot"></div>
+<div id="site-header"></div>
+
+<section class="hero">
+  <div class="hero-bg"><img src="images/hero.jpg" alt=""></div>
+  <div class="particles" id="particles"></div>
+  <div class="hero-inner">
+    <p class="kicker">MAISON DE PARFUM · PARIS</p>
+    <h1 class="hero-title gold-shimmer">VELMORA</h1>
+    <p class="hero-tag" data-i18n="hero_tag">جوهر الفخامة</p>
+    <p class="hero-sub" data-i18n="hero_sub"></p>
+    <div class="hero-ctas">
+      <a href="collections.html" class="gold-btn" data-i18n="hero_cta">اكتشف المجموعة</a>
+      <a href="quiz.html" class="ghost-btn" data-i18n="hero_cta2">حلل شخصيتك العطرية</a>
+    </div>
+  </div>
+  <div class="scroll-hint">SCROLL</div>
+</section>
+
+<section class="section" id="featured-preview">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="kicker">— SIGNATURE —</p>
+      <h2 class="gold-gradient" data-i18n="coll_title"></h2>
+      <p data-i18n="coll_sub"></p>
+    </div>
+    <div class="products-grid" id="featured-grid"></div>
+    <p class="center" style="margin-top:2.5rem"><a href="collections.html" class="gold-btn" data-i18n="hero_cta">اكتشف المجموعة</a></p>
+  </div>
+</section>
+
+<section class="section bespoke">
+  <div class="container">
+    <span class="crown">♛</span>
+    <p class="kicker">— PRIVATE ATELIER —</p>
+    <h2 class="gold-gradient" data-i18n="bespoke_title"></h2>
+    <p class="muted-lg" data-i18n="bespoke_sub"></p>
+    <a href="bespoke.html" class="gold-btn" data-i18n="bespoke_btn"></a>
+  </div>
+</section>
+
+<section class="newsletter">
+  <div class="container">
+    <p class="kicker">— MAISON —</p>
+    <h2 class="serif xl gold-gradient" data-i18n="newsletter_title"></h2>
+    <p class="muted" data-i18n="newsletter_sub"></p>
+    <form onsubmit="event.preventDefault();VELMORA.toast(VELMORA.getLang()==='ar'?'شكراً لاشتراكك':'Thank you')">
+      <input type="email" required data-i18n-placeholder="email_ph">
+      <button class="gold-btn" data-i18n="newsletter_btn"></button>
+    </form>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script>
+// Particles
+(function(){
+  const p = document.getElementById('particles');
+  for(let i=0;i<40;i++){
+    const s = document.createElement('span');
+    s.className='particle';
+    s.style.left=Math.random()*100+'%';
+    s.style.animationDelay=(Math.random()*12)+'s';
+    s.style.animationDuration=(8+Math.random()*12)+'s';
+    const sz=1+Math.random()*3; s.style.width=sz+'px'; s.style.height=sz+'px';
+    p.appendChild(s);
+  }
+})();
+// Featured
+document.addEventListener('DOMContentLoaded', function render(){
+  const lang = VELMORA.getLang();
+  const items = VELMORA.products.slice(0,4);
+  document.getElementById('featured-grid').innerHTML = items.map(p=>`
+    <article class="product-card">
+      <div class="pc-img"><img src="${p.image}" alt=""><span class="pc-badge">${p.category.toUpperCase()}</span></div>
+      <div class="pc-body">
+        <h3 class="pc-name">${p.name[lang]}</h3>
+        <p class="pc-tag">${p.tagline[lang]}</p>
+        <div class="pc-foot">
+          <span class="pc-price">ج.م${p.price}</span>
+          <button class="gold-btn small" onclick="VELMORA.addToCart('${p.id}')">${VELMORA.t('add_to_cart')}</button>
+        </div>
+      </div>
+    </article>`).join('');
+});
+document.addEventListener('langchange', ()=>{
+  const lang = VELMORA.getLang();
+  document.getElementById('featured-grid').innerHTML = VELMORA.products.slice(0,4).map(p=>`
+    <article class="product-card">
+      <div class="pc-img"><img src="${p.image}" alt=""><span class="pc-badge">${p.category.toUpperCase()}</span></div>
+      <div class="pc-body">
+        <h3 class="pc-name">${p.name[lang]}</h3>
+        <p class="pc-tag">${p.tagline[lang]}</p>
+        <div class="pc-foot">
+          <span class="pc-price">ج.م${p.price}</span>
+          <button class="gold-btn small" onclick="VELMORA.addToCart('${p.id}')">${VELMORA.t('add_to_cart')}</button>
+        </div>
+      </div>
+    </article>`).join('');
+});
+</script>
+</body></html>

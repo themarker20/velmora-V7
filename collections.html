@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+<title>المجموعات — VELMORA PARIS</title>
+</head>
+<body>
+  <div class="cursor"></div>
+  <div class="cursor-dot"></div>
+<div id="site-header"></div>
+<section class="section" style="padding-top:9rem">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="kicker">— LA COLLECTION —</p>
+      <h2 class="gold-gradient" data-i18n="coll_title"></h2>
+      <p data-i18n="coll_sub"></p>
+    </div>
+    <div class="filters">
+      <div class="filter-row" id="filter-cats"></div>
+      <div class="filter-row" id="filter-gens"></div>
+      <div class="filter-row" id="filter-seas"></div>
+    </div>
+    <div class="products-grid" id="products-grid"></div>
+  </div>
+</section>
+
+<section class="section" style="background:#080808">
+  <div class="container">
+    <div class="oils-card reveal">
+      <span class="oils-badge" data-i18n="coming_soon"></span>
+      <h2 class="serif xxl gold-gradient" data-i18n="oils_title"></h2>
+      <p class="muted-lg" data-i18n="oils_sub"></p>
+      <button class="gold-btn" onclick="VELMORA.toast(VELMORA.getLang()==='ar'?'سنبلغك قريباً':'We will notify you')" data-i18n="notify_me"></button>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/collections.js"></script>
+</body></html>
