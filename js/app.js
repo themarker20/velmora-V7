@@ -38,7 +38,7 @@
     return `
     <header class="navbar">
       <div class="nav-inner">
-        <a href="index.html" class="brand">VELMORA Nich Perfume</a>
+        <a href="index.html" class="brand">Veyvora <br> <span style="font-size: 11px; letter-spacing: 1px;">Essence Beyond Time</span></a>
         <nav class="nav-links">
           ${links.map(([h,k])=>`<a href="${h}" class="${h===current?'active':''}" data-i18n="${k}">${t(k)}</a>`).join("")}
         </nav>
@@ -59,7 +59,7 @@
   function footer(){
     return `
     <footer class="footer">
-      <p class="footer-brand">VELMORA Nich Perfume</p>
+      <p class="footer-brand">Veyvora  -  Essence Beyond Time</p>
       <p class="footer-sub">Egypt · SINCE 2007</p>
       <div class="divider"></div>
       <div class="socials">
@@ -165,7 +165,7 @@
   function sendWhatsApp(data){
     const isAr = lang === "ar";
     const lines = [];
-    lines.push(isAr ? "🌹 طلب جديد من VELMORA Nich Perfume" : "🌹 New VELMORA Nich Perfume order");
+    lines.push(isAr ? "🌹 طلب جديد من Veyvora  -  Essence Beyond Time" : "🌹 New Veyvora  -  Essence Beyond Time order");
     lines.push("");
     lines.push((isAr?"الاسم: ":"Name: ") + data.name);
     lines.push((isAr?"الهاتف: ":"Phone: ") + data.phone);
