@@ -53,7 +53,7 @@ VELMORA.products = [
 
 
   { id:"hacivat-nishane", image:"images/hacivat-nishane.png",
-    name:{ar:"نشان حجيفات",en:"Hacivat Nishane"},
+    name:{ar:"نشان هجيفات",en:"Hacivat Nishane"},
     tagline:{ar:"خليط من طحلب السنديان والحمضيات بطابع خشبى",en:"A blend of oakmoss and citrus with a woody character."},
     notes:{ar:["الأناناس","الجريب فروت","البرغموت","خشب الأرز", "الباتشولى","الياسمين"],en:["Pineapple", "Grapefruit", "Bergamot", "Cedarwood", "Patchouli", "Jasmine"]},
     price:260, category:"citrus", gender:"unisex", season:"summer",
