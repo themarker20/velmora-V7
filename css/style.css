@@ -203,6 +203,36 @@ button{ background:none; border:none; color:inherit; font:inherit; }
 .pc-foot{ display:flex; align-items:center; justify-content:space-between; margin-top:1rem; }
 .pc-price{ font-family:var(--serif); font-size:1.4rem; color:var(--gold); }
 
+/* Oils */
+.oils-hero{
+  text-align:center; padding:5rem 2rem 3rem; border:1px solid var(--line);
+  background:radial-gradient(ellipse at center,rgba(212,175,55,.08),transparent 70%), #0a0a0a;
+  margin-bottom:3rem;
+}
+.oils-badge{ display:inline-block; padding:.4rem 1rem; border:1px solid var(--gold); color:var(--gold); font-size:.65rem; letter-spacing:.4em; text-transform:uppercase; margin-bottom:1.5rem; }
+.oil-card{
+  position:relative; border:1px solid var(--line); padding:2.5rem 1.5rem; text-align:center;
+  background:linear-gradient(180deg,#141414,#0a0a0a);
+  display:flex; flex-direction:column; align-items:center; gap:.8rem;
+  transition:border-color .35s, transform .35s, box-shadow .35s;
+  min-height:380px;
+}
+.oil-card:hover{ border-color:var(--gold-soft); transform:translateY(-6px); box-shadow:0 30px 60px -20px rgba(212,175,55,.2); }
+.oil-drop{
+  width:84px; height:84px; border-radius:50%;
+  background:radial-gradient(circle at 35% 30%, #F4E8C1, #D4AF37 40%, #8B7A2B 75%, #3a2f12 100%);
+  box-shadow:0 0 40px rgba(212,175,55,.35), inset -8px -10px 30px rgba(0,0,0,.4);
+  margin-bottom:1rem;
+}
+.oil-name{ font-family:var(--serif); color:var(--gold-light); font-size:1.4rem; }
+.oil-volume{ font-size:.7rem; letter-spacing:.4em; color:var(--gold); text-transform:uppercase; }
+.oil-tag{ color:rgba(245,245,240,.65); font-style:italic; font-size:.85rem; line-height:1.6; }
+.oil-notes{ font-size:.75rem; color:rgba(245,245,240,.55); margin-top:auto; }
+.oil-foot{ display:flex; align-items:center; justify-content:space-between; width:100%; margin-top:1rem; gap:.6rem; }
+.oil-price{ font-family:var(--serif); font-size:1.3rem; color:var(--gold); }
+.oil-soon{ display:inline-block; padding:.35rem .9rem; border:1px solid var(--gold); color:var(--gold); font-size:.6rem; letter-spacing:.4em; text-transform:uppercase; }
+
+
 /* Story */
 .story-grid{ display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center; }
 @media (max-width:880px){ .story-grid{ grid-template-columns:1fr; } }

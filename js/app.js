@@ -28,6 +28,7 @@
     const links = [
       ["index.html","nav_home"],
       ["collections.html","nav_collections"],
+      ["oils.html","nav_oils"],
       ["story.html","nav_story"],
       ["quiz.html","nav_quiz"],
       ["bespoke.html","nav_bespoke"],

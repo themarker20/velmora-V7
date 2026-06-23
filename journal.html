@@ -14,7 +14,7 @@
 <section class="section" style="padding-top:9rem">
   <div class="container">
     <div class="section-head reveal">
-      <p class="kicker">— LE JOURNAL —</p>
+      <p class="kicker">—  JOURNAL —</p>
       <h2 class="gold-gradient" data-i18n="journal_title"></h2>
     </div>
     <div class="journal-grid" id="journal-grid"></div>
@@ -25,7 +25,7 @@
 <script src="js/app.js"></script>
 <script>
 const posts = [
-  { titleAr:"فن صناعة العطر الفرنسي", titleEn:"The Art of French Perfumery", catAr:"إرث", catEn:"Heritage", read:6 },
+  { titleAr:"خبرة تتحول إلى واقع", titleEn:"Experience transformed into reality", catAr:"إرث", catEn:"Heritage", read:8 },
   { titleAr:"العود: ذهب الشرق السائل", titleEn:"Oud: The Liquid Gold of the East", catAr:"مكونات", catEn:"Ingredients", read:4 },
   { titleAr:"كيف تختار عطرك المسائي؟", titleEn:"Choosing Your Evening Scent", catAr:"أسلوب", catEn:"Style", read:5 },
 ];
@@ -36,7 +36,7 @@ function renderJ(){
       <div class="journal-inner">
         <span class="journal-cat">${lang==='ar'?p.catAr:p.catEn}</span>
         <h3>${lang==='ar'?p.titleAr:p.titleEn}</h3>
-        <p>${p.read} min read</p>
+        <p>${p.read} Vie</p>
       </div>
     </article>`).join('');
 }

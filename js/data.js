@@ -63,12 +63,12 @@ VELMORA.products = [
 // citrus exclusive floral oud
 
 VELMORA.questions = [
-  { id:"q_time", prompt:{ar:"أي وقت من اليوم يشبهك أكثر؟",en:"Which time of day feels most like you?"},
+  { id:"q_time", prompt:{ar:"أي وقت من اليوم تفصل؟",en:"Which time of day you prefer?"},
     options:[
       {id:"midnight",emoji:"🌙",label:{ar:"ما بعد منتصف الليل",en:"Past midnight"},delta:{mystery:25,seduction:15,freshness:-10},next:"q_scene_night"},
       {id:"dawn",emoji:"🌅",label:{ar:"شروق الشمس",en:"Sunrise"},delta:{freshness:25,elegance:10,mystery:-10},next:"q_scene_fresh"},
       {id:"afternoon",emoji:"☕",label:{ar:"عصر هادئ",en:"A quiet afternoon"},delta:{warmth:20,elegance:15},next:"q_scene_cozy"},
-      {id:"citynight",emoji:"🌆",label:{ar:"مدينة مزدحمة ليلاً",en:"A city at night"},delta:{power:20,seduction:15,mystery:10},next:"q_scene_night"},
+      {id:"citynight",emoji:"🌆",label:{ar:"ليل صاخب",en:"Loud Night"},delta:{power:20,seduction:15,mystery:10},next:"q_scene_night"},
     ]},
   { id:"q_scene_night", prompt:{ar:"أي مشهد يجذبك أكثر؟",en:"Which scene draws you in?"},
     options:[
@@ -161,6 +161,7 @@ VELMORA.archetypes = [
 VELMORA.dict = {
   nav_home:{ar:"الرئيسية",en:"Home"},
   nav_collections:{ar:"المجموعات",en:"Collections"},
+  nav_oils:{ar:"الزيوت",en:"Oils"},
   nav_story:{ar:"قصتنا",en:"Our Story"},
   nav_quiz:{ar:"اكتشف عطرك",en:"Discover Your Scent"},
   nav_bespoke:{ar:"عطر مخصص",en:"Bespoke"},
@@ -180,7 +181,8 @@ VELMORA.dict = {
   add_to_cart:{ar:"أضف إلى السلة",en:"Add to Cart"},
   notes:{ar:"نوتات العطر",en:"Fragrance Notes"},
   oils_title:{ar:"الزيوت العطرية",en:"Aromatic Oils"},
-  oils_sub:{ar:"تشكيلة جديدة من الزيوت النقية الفاخرة — قريباً.",en:"A new collection of pure luxurious oils — coming soon."},
+  oils_sub:{ar:"تشكيلة فاخرة من الزيوت العطرية النقية — مركّزة و مصاغة يدوياً.",en:"A maison of pure aromatic oils — concentrated and crafted by hand."},
+  oils_kicker:{ar:"— أوّل قطرة، آخر ذكرى —",en:"— First drop, lasting memory —"},
   coming_soon:{ar:"قريباً",en:"Coming Soon"},
   notify_me:{ar:"أبلغني عند التوفر",en:"Notify Me"},
   story_title:{ar:"إرث من مصر",en:"A Heritage from Egypt"},
@@ -231,3 +233,29 @@ VELMORA.dict = {
   scoreL_power:{ar:"القوة",en:"Power"},
   scoreL_warmth:{ar:"الدفء",en:"Warmth"},
 };
+
+
+
+VELMORA.oils = [
+  { id:"oil-ambre-royal",
+    name:{ar:"عنبر ملكي",en:"Ambre Royal"},
+    tagline:{ar:"دفء العنبر مع لمسة فانيليا",en:"Royal amber wrapped in vanilla"},
+    notes:{ar:["عنبر","فانيليا","لبدان"],en:["Amber","Vanilla","Labdanum"]},
+    volume:"12ml", price:180, available:false },
+  { id:"oil-oud-mubakhar",
+    name:{ar:"عود مبخّر",en:"Oud Mubakhar"},
+    tagline:{ar:"عود هندي معتّق برائحة البخور",en:"Aged Indian oud with incense"},
+    notes:{ar:["عود هندي","صندل","بخور"],en:["Indian Oud","Sandalwood","Incense"]},
+    volume:"6ml", price:320, available:false },
+  { id:"oil-musk-blanc",
+    name:{ar:"مسك أبيض",en:"Musc Blanc"},
+    tagline:{ar:"نقاء حريري بلمسة وردة",en:"Silken purity touched by rose"},
+    notes:{ar:["مسك أبيض","وردة","ياسمين"],en:["White Musk","Rose","Jasmine"]},
+    volume:"12ml", price:150, available:false },
+  { id:"oil-rose-taifi",
+    name:{ar:"وردة طائفية",en:"Rose Taïfi"},
+    tagline:{ar:"وردة الطائف بأعلى تركيز",en:"Rare Taïf rose absolute"},
+    notes:{ar:["وردة الطائف","فلفل وردي","عنبر"],en:["Taïf Rose","Pink Pepper","Amber"]},
+    volume:"6ml", price:280, available:false },
+  // Add more oils here ↓
+];
